@@ -18,14 +18,15 @@ The binary output is produced via right shifts and a bitmask (`& 1`) inside a `f
 ## Build & Run
 On macOS (local testing)
 
-gcc rec01.c -o rec01
-./rec01
+`gcc rec01.c -o rec01
+./rec01`
 
-Usage
+## Usage
 Program prompts:
-Enter an ASCII character: A
+`Enter an ASCII character: A`
 Sample Output
-Input: A
+Input: `A`
+```
 dec -- 65
 hex -- 41
 bin -- 01000001
@@ -33,18 +34,13 @@ Input: a
 dec -- 97
 hex -- 61
 bin -- 01100001
-Implementation Notes
-Input stored as unsigned char for predictable, non-negative integer behavior and clean bitwise shifts.
-Binary printing uses:
-for (int i = 7; i >= 0; i--) {
-    int bit = (ch >> i) & 1;
-    printf("%d", bit);
-}
-printf("\n");
-Hex uses %X to match the assignment’s sample output.
-Repo Structure
+```
+
+## Repo Structure
+```
 csce3600-rec01/
 ├─ rec01.c
 └─ README.md
+```
 
 
